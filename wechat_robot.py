@@ -29,7 +29,6 @@ nickname_compile = re.compile(r"\<ChatroomMember:.*?'NickName': '(.*?)'", re.S)
 welcome_words = '(˶ᵔᵕᵔ˶)\n我是智障机器人小浪，发送关键字：菜单 \n可查看相关关键字！'
 
 # 菜单回复词
-#menu_answer = '(˶ᵔᵕᵔ˶)可用关键词如下：\n1.加群\n2.博客\n3.Github\n4.公众号\n5.打赏\n6.小浪\n注：智障机器人不会聊天哦！'
 menu_answer = '(˶ᵔᵕᵔ˶)可用关键词如下：\n1.加群\n2.公众号\n3.打赏\n4.小浪\n注：智障机器人不会聊天哦！'
 
 # 加群回复词
@@ -95,12 +94,6 @@ def deal_with_msg(msg):
                 friend_group.append(nickname)
         else:
             itchat.send_msg(add_repeat_answer, msg['FromUserName'])
-#    elif text == u'博客':
-#        time.sleep(random.randint(1, 3))
-#        return 'coder-pig的个人主页-掘金：https://juejin.im/user/570afb741ea493005de84da3'
-#    elif text == u'Github':
-#        time.sleep(random.randint(1, 3))
-#        return 'https://github.com/coder-pig'
     elif text == u'公众号':
         time.sleep(random.randint(1, 3))
         itchat.send_image('gzh.jpg', msg['FromUserName'])
